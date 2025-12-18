@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #000;
+  margin: 0;
+  overflow: hidden; /* Importante para evitar scroll bars en el juego */
+}
+
+/* Animación para el botón flotante 3D */
+@keyframes spin-horizontal {
+  0% { transform: perspective(1000px) rotateY(0deg); }
+  100% { transform: perspective(1000px) rotateY(360deg); }
+}
+
+.animate-spin-horizontal {
+  animation: spin-horizontal 3s linear infinite;
+  transform-style: preserve-3d;
+}
